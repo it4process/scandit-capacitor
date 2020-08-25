@@ -143,7 +143,7 @@ class ScanditCaptureCore : CordovaPlugin(),
     }
 
     override fun pluginInitialize() {
-        captureViewHandler.attachWebView(webView.view, cordova.activity)
+        // captureViewHandler.attachWebView(webView.view, cordova.activity)
         checkCameraPermission()
     }
 
