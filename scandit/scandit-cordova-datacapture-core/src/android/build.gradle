@@ -11,7 +11,7 @@ repositories {
 }
 
 dependencies {
-    api(name: 'ScanditCaptureCore', ext: 'aar')
+    api 'com.scandit.datacapture:core:6.4.2'
 }
 
 allOpen {

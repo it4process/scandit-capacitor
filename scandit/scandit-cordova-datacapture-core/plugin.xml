@@ -95,11 +95,10 @@
 
         <source-file src="src/ios/SDCVolumeButtonObserver.h" />
 
-        <dependency id="cordova-plugin-add-swift-support" version="2.0.2" />
-        <dependency id="cordova-plugin-wkwebview-engine" version="1.1.4" />
+        <!-- <dependency id="cordova-plugin-add-swift-support" version="2.0.2" /> -->
+        <!-- <dependency id="cordova-plugin-wkwebview-engine" version="1.1.4" /> -->
 
-        <framework custom="true" embed="true"
-            src="src/ios/framework/ScanditCaptureCore.framework" version="6.4.2" />
+        <framework src="ScanditCaptureCore" type="podspec" embed="true" spec="~> 6.4.2" />
 
         <hook src="src/hooks/build.js" type="before_plugin_install" />
         <hook src="src/hooks/add-frameworks.js" type="before_plugin_install" />
@@ -259,18 +258,17 @@
         <source-file src="src/android/testing/TestAnnotations.kt"
             target-dir="kotlin/com/scandit/datacapture/cordova/core/testing" />
 
-        <framework custom="true" src="src/android/build.gradle" type="gradleReference" />
-        <framework src="com.squareup.okhttp3:okhttp:3.12.10" />
+        <framework custom="true" src="src/android/kotlin-support.gradle" type="gradleReference" />
 
-        <resource-file custom="true"
-            src="src/android/library/ScanditCaptureCore.aar" target="libs/ScanditCaptureCore.aar" version="6.4.2" />
+        <framework custom="true" src="src/android/build.gradle" type="gradleReference" />
+        <!-- <framework src="com.squareup.okhttp3:okhttp:3.12.10" /> -->
 
         <hook src="src/hooks/build.js" type="before_plugin_install" />
         <hook src="src/hooks/add-frameworks.js" type="before_plugin_install" />
 
         <!-- Add Kotlin support -->
         <hook src="src/hooks/support-kotlin.js" type="after_plugin_install" />
-        <framework src="org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version" />
+        <!-- <framework src="org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version" /> -->
         <apply-plugin>kotlin-android</apply-plugin>
         <apply-plugin>kotlin-android-extensions</apply-plugin>
         <apply-plugin>kotlin-kapt</apply-plugin>

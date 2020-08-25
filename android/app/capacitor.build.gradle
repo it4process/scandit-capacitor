@@ -12,7 +12,8 @@ dependencies {
 
 
 }
-
+apply from: "../../node_modules/scandit-cordova-datacapture-core/src/android/kotlin-support.gradle"
+apply from: "../../node_modules/scandit-cordova-datacapture-core/src/android/build.gradle"
 
 if (hasProperty('postBuildExtras')) {
   postBuildExtras()
