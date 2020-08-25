@@ -1,0 +1,7 @@
+{
+  "name": "scandit-capacitor",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
