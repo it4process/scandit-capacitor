@@ -5,5 +5,5 @@
  */
 
 dependencies {
-    api(name: 'ScanditBarcodeCapture', ext: 'aar')
+    api 'com.scandit.datacapture:barcode:6.4.2'
 }

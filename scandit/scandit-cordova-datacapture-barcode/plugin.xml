@@ -76,8 +76,7 @@
 
         <dependency id="scandit-cordova-datacapture-core" version="6.4.2" />
 
-        <framework custom="true" embed="true"
-            src="src/ios/framework/ScanditBarcodeCapture.framework" version="6.4.2" />
+        <framework src="ScanditBarcodeCapture" type="podspec" embed="true" spec="~> 6.4.2" />
 
         <hook src="src/hooks/build.js" type="before_plugin_install" />
         <hook src="src/hooks/add-frameworks.js" type="before_plugin_install" />
@@ -179,8 +178,8 @@
 
         <framework custom="true" src="src/android/build.gradle" type="gradleReference" />
 
-        <resource-file custom="true"
-            src="src/android/library/ScanditBarcodeCapture.aar" target="libs/ScanditBarcodeCapture.aar" version="6.4.2" />
+        <!-- <resource-file custom="true"
+            src="src/android/library/ScanditBarcodeCapture.aar" target="libs/ScanditBarcodeCapture.aar" version="6.4.2" /> -->
 
         <hook src="src/hooks/build.js" type="before_plugin_install" />
         <hook src="src/hooks/add-frameworks.js" type="before_plugin_install" />
